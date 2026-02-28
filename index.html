@@ -8,42 +8,24 @@
     <meta name="description"
         content="Ava Hu is a bilingual reporter focusing on data reporting and local accountability stories. Published by The Guardian, Houston Chronicle, and more.">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- ========== Navigation ========== -->
-    <nav class="navbar" id="navbar">
+    <!-- ========== Hero / Bio ========== -->
+    <section class="hero">
         <div class="container">
-            <a href="#" class="nav-logo">Ava Hu</a>
-            <div class="nav-links" id="navLinks">
-                <a href="#awards">Awards</a>
-                <a href="#writing">Writing</a>
-                <a href="#projects">Data Projects</a>
-                <a href="#visualizations">Visualizations</a>
-            </div>
-            <div class="nav-toggle" id="navToggle"
-                onclick="document.getElementById('navLinks').classList.toggle('open')">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
-    </nav>
-
-    <!-- ========== Hero ========== -->
-    <section class="hero" id="hero">
-        <div class="container">
-            <div class="hero-photo-wrapper">
-                <img src="images/headshot.jpg" class="hero-photo" alt="Ava Hu">
-            </div>
+            <img src="images/headshot.jpg" class="hero-photo" alt="Ava Hu">
             <div class="hero-content">
                 <h1 class="hero-name">Ava Hu</h1>
-                <p class="hero-location">📍 Bay Area, California</p>
-                <p class="hero-tagline">Data Reporting · Design · Multimedia</p>
                 <p class="hero-bio">
-                    Bilingual reporter focusing on data reporting and local accountability stories.
-                    Working on immigration, higher education and public records. Published by The Guardian.
-                    B.A. in Broadcast Journalism & Marketing from Syracuse University; pursuing M.A. in Data Reporting
-                    at UC Berkeley.
+                    📍 Bay Area · Bilingual reporter focusing on <span class="highlight">data reporting</span> and local
+                    accountability stories.
+                    Working on immigration, higher education and public records.
+                    Published by <a href="https://www.theguardian.com/profile/ava-hu" target="_blank"
+                        class="highlight">The Guardian</a>.
+                    B.A. from Syracuse; pursuing M.A. in Data Reporting at <span class="highlight">UC Berkeley</span>.
                 </p>
                 <div class="hero-skills">
                     <span class="skill-tag">Python</span>
@@ -53,493 +35,456 @@
                     <span class="skill-tag">Figma</span>
                     <span class="skill-tag">InDesign</span>
                     <span class="skill-tag">Illustrator</span>
-                    <span class="skill-tag">WordPress</span>
                     <span class="skill-tag">Premiere</span>
                     <span class="skill-tag">After Effects</span>
-                    <span class="skill-tag">Photoshop</span>
+                </div>
+                <div class="hero-links">
+                    <a href="mailto:ava_hu@berkeley.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/avahu/" target="_blank" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/avahuu" target="_blank" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ========== Awards ========== -->
-    <section class="section section--alt" id="awards">
+    <!-- ========== Tab Navigation ========== -->
+    <nav class="tab-nav">
         <div class="container">
-            <div class="section-header fade-in">
+            <button class="tab-btn active" data-tab="writing">WRITING</button>
+            <button class="tab-btn" data-tab="data">DATA PROJECTS</button>
+            <button class="tab-btn" data-tab="viz">VISUALIZATIONS</button>
+        </div>
+    </nav>
+
+    <!-- ========== Tab Content ========== -->
+    <main class="tab-content">
+        <div class="container">
+
+            <!-- ===== WRITING TAB ===== -->
+            <div class="tab-panel active" id="tab-writing">
+
+                <!-- Awards -->
                 <h2 class="section-title">Awards</h2>
-            </div>
-            <div class="awards-grid">
+                <div class="awards-list">
+                    <a href="https://foreignpresscorrespondents.org/2025-foreign-press-awards" target="_blank"
+                        rel="noopener" class="award-item">
+                        <span class="award-emoji">🏆</span>
+                        <div class="award-info">
+                            <h3>Association of Foreign Press Correspondents Scholarship Awardee</h3>
+                            <span>Read More →</span>
+                        </div>
+                    </a>
+                    <a href="https://spjnorcal.org/2025/10/30/spj-norcal-honors-2025-excellence-in-journalism-award-winners/"
+                        target="_blank" rel="noopener" class="award-item">
+                        <span class="award-emoji">🏅</span>
+                        <div class="award-info">
+                            <h3>SPJ Annual Excellence in Journalism Awards — Breaking News</h3>
+                            <span>Read More →</span>
+                        </div>
+                    </a>
+                </div>
 
-                <a href="https://foreignpresscorrespondents.org/2025-foreign-press-awards" target="_blank"
-                    rel="noopener" class="award-card fade-in">
-                    <div class="award-icon">🏆</div>
-                    <div class="award-content">
-                        <h3 class="award-title">Association of Foreign Press Correspondents Scholarship Awardee</h3>
-                        <span class="award-link">Read More</span>
-                    </div>
-                </a>
-
-                <a href="https://spjnorcal.org/2025/10/30/spj-norcal-honors-2025-excellence-in-journalism-award-winners/"
-                    target="_blank" rel="noopener" class="award-card fade-in">
-                    <div class="award-icon">🏅</div>
-                    <div class="award-content">
-                        <h3 class="award-title">SPJ Annual Excellence in Journalism Awards — Breaking News</h3>
-                        <span class="award-link">Read More</span>
-                    </div>
-                </a>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== Writing Samples ========== -->
-    <section class="section" id="writing">
-        <div class="container">
-            <div class="section-header fade-in">
+                <!-- Writing Samples -->
                 <h2 class="section-title">Writing Samples</h2>
-            </div>
 
-            <!-- AAPI Data -->
-            <div class="pub-group fade-in">
-                <div class="pub-group-header">
-                    <span class="pub-logo">AAPI Data</span>
-                    <span class="pub-count">1 article</span>
-                </div>
-                <div class="articles-grid">
-                    <a href="https://aapidata.com/blog/policy-whiplash-high-skilled-immigrants-and-international-students-in-the-second-trump-administration"
-                        target="_blank" rel="noopener" class="article-card">
-                        <div class="article-meta">
+                <!-- AAPI Data -->
+                <div class="pub-group">
+                    <div class="pub-group-header">
+                        <span class="pub-logo">AAPI Data</span>
+                        <span class="pub-count">1</span>
+                    </div>
+                    <div class="articles-list">
+                        <a href="https://aapidata.com/blog/policy-whiplash-high-skilled-immigrants-and-international-students-in-the-second-trump-administration"
+                            target="_blank" class="article-row">
                             <span class="article-category cat-policy">Policy</span>
+                            <span class="article-title">Policy Whiplash: High Skilled Immigrants and International
+                                Students in the Second Trump Administration</span>
                             <span class="article-date">Nov 18, 2025</span>
-                        </div>
-                        <h3 class="article-title">Policy Whiplash: High Skilled Immigrants and International Students in
-                            the Second Trump Administration</h3>
-                    </a>
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <!-- The Guardian -->
-            <div class="pub-group fade-in">
-                <div class="pub-group-header">
-                    <span class="pub-logo">The Guardian</span>
-                    <span class="pub-count">3 articles</span>
-                </div>
-                <div class="articles-grid">
-                    <a href="https://www.theguardian.com/us-news/2025/apr/25/student-visa-legal-status-restored"
-                        target="_blank" rel="noopener" class="article-card">
-                        <div class="article-meta">
+                <!-- The Guardian -->
+                <div class="pub-group">
+                    <div class="pub-group-header">
+                        <span class="pub-logo">The Guardian</span>
+                        <span class="pub-count">3</span>
+                    </div>
+                    <div class="articles-list">
+                        <a href="https://www.theguardian.com/us-news/2025/apr/25/student-visa-legal-status-restored"
+                            target="_blank" class="article-row">
                             <span class="article-category cat-immigrants">Immigrants</span>
+                            <span class="article-title">US restoring legal status of hundreds of students after abruptly
+                                revoking visas</span>
                             <span class="article-date">Apr 25, 2025</span>
-                        </div>
-                        <h3 class="article-title">US restoring legal status of hundreds of students after abruptly
-                            revoking visas</h3>
-                    </a>
-                    <a href="https://www.theguardian.com/us-news/2025/apr/07/trump-student-visas-deportation"
-                        target="_blank" rel="noopener" class="article-card">
-                        <div class="article-meta">
+                        </a>
+                        <a href="https://www.theguardian.com/us-news/2025/apr/07/trump-student-visas-deportation"
+                            target="_blank" class="article-row">
                             <span class="article-category cat-immigrants">Immigrants</span>
+                            <span class="article-title">Deported over a speeding ticket? Dozens of US students' visas
+                                abruptly revoked</span>
                             <span class="article-date">Apr 7, 2025</span>
-                        </div>
-                        <h3 class="article-title">Deported over a speeding ticket? Dozens of US students' visas abruptly
-                            revoked</h3>
-                    </a>
-                    <a href="https://www.theguardian.com/media/2024/nov/04/chinese-americans-election-misinformation"
-                        target="_blank" rel="noopener" class="article-card">
-                        <div class="article-meta">
+                        </a>
+                        <a href="https://www.theguardian.com/media/2024/nov/04/chinese-americans-election-misinformation"
+                            target="_blank" class="article-row">
                             <span class="article-category cat-immigrants">Immigrants</span>
+                            <span class="article-title">Chinese Americans targeted with 'misogynistic and insulting'
+                                election misinformation</span>
                             <span class="article-date">Nov 4, 2024</span>
-                        </div>
-                        <h3 class="article-title">Chinese Americans targeted with 'misogynistic and insulting' election
-                            misinformation</h3>
-                    </a>
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Houston Chronicle -->
-            <div class="pub-group fade-in">
-                <div class="pub-group-header">
-                    <span class="pub-logo">Houston Chronicle</span>
-                    <span class="pub-count">4 articles</span>
-                </div>
-                <div class="articles-grid">
-                    <a href="https://www.houstonchronicle.com/news/houston-texas/immigration/article/texas-birthright-citizenship-trump-20805841.php"
-                        target="_blank" rel="noopener" class="article-card">
-                        <div class="article-meta">
+                <!-- Houston Chronicle -->
+                <div class="pub-group">
+                    <div class="pub-group-header">
+                        <span class="pub-logo">Houston Chronicle</span>
+                        <span class="pub-count">4</span>
+                    </div>
+                    <div class="articles-list">
+                        <a href="https://www.houstonchronicle.com/news/houston-texas/immigration/article/texas-birthright-citizenship-trump-20805841.php"
+                            target="_blank" class="article-row">
                             <span class="article-category cat-immigrants">Immigrants</span>
+                            <span class="article-title">Courts stall Trump's order to end birthright citizenship.
+                                Houston is among most affected.</span>
                             <span class="article-date">Aug 25, 2025</span>
-                        </div>
-                        <h3 class="article-title">Courts stall Trump's order to end birthright citizenship. Houston is
-                            among most affected, data shows.</h3>
-                    </a>
-                    <a href="https://www.houstonchronicle.com/projects/2025/texas-ice-detainer-tracker/" target="_blank"
-                        rel="noopener" class="article-card">
-                        <div class="article-meta">
+                        </a>
+                        <a href="https://www.houstonchronicle.com/projects/2025/texas-ice-detainer-tracker/"
+                            target="_blank" class="article-row">
                             <span class="article-category cat-immigrants">Immigrants</span>
+                            <span class="article-title">Texas jails see 30% more ICE holds under Trump.</span>
                             <span class="article-date">Aug 18, 2025</span>
-                        </div>
-                        <h3 class="article-title">Texas jails see 30% more ICE holds under Trump.</h3>
-                    </a>
-                    <a href="https://www.houstonchronicle.com/projects/2025/houston-climate-opinions-2025/"
-                        target="_blank" rel="noopener" class="article-card">
-                        <div class="article-meta">
+                        </a>
+                        <a href="https://www.houstonchronicle.com/projects/2025/houston-climate-opinions-2025/"
+                            target="_blank" class="article-row">
                             <span class="article-category cat-climate">Climate</span>
+                            <span class="article-title">How concerned are Houstonians about climate change?</span>
                             <span class="article-date">Aug 25, 2025</span>
-                        </div>
-                        <h3 class="article-title">How concerned are Houstonians about climate change?</h3>
-                    </a>
-                    <a href="https://www.houstonchronicle.com/news/houston-texas/immigration/article/houston-asylum-seekers-face-longer-detention-ice-20381512.php"
-                        target="_blank" rel="noopener" class="article-card">
-                        <div class="article-meta">
+                        </a>
+                        <a href="https://www.houstonchronicle.com/news/houston-texas/immigration/article/houston-asylum-seekers-face-longer-detention-ice-20381512.php"
+                            target="_blank" class="article-row">
                             <span class="article-category cat-immigrants">Immigrants</span>
+                            <span class="article-title">'It's a prison:' Asylum seekers in Houston detention centers
+                                face longer stays</span>
                             <span class="article-date">Jun 29, 2025</span>
-                        </div>
-                        <h3 class="article-title">'It's a prison:' Asylum seekers in Houston detention centers face
-                            longer stays</h3>
-                    </a>
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Daily Californian -->
-            <div class="pub-group fade-in">
-                <div class="pub-group-header">
-                    <span class="pub-logo">Daily Californian</span>
-                    <span class="pub-count">2 articles</span>
-                </div>
-                <div class="articles-grid">
-                    <a href="https://www.dailycal.org/news/campus/12-uc-berkeley-students-visas-restored-by-ice-in-nationwide-reversal/article_c5206780-8bae-497e-8401-556210f2ffe1.html"
-                        target="_blank" rel="noopener" class="article-card">
-                        <div class="article-meta">
+                <!-- Daily Californian -->
+                <div class="pub-group">
+                    <div class="pub-group-header">
+                        <span class="pub-logo">Daily Californian</span>
+                        <span class="pub-count">2</span>
+                    </div>
+                    <div class="articles-list">
+                        <a href="https://www.dailycal.org/news/campus/12-uc-berkeley-students-visas-restored-by-ice-in-nationwide-reversal/article_c5206780-8bae-497e-8401-556210f2ffe1.html"
+                            target="_blank" class="article-row">
                             <span class="article-category cat-immigrants">Immigrants</span>
+                            <span class="article-title">12 UC Berkeley students' visas restored by ICE in nationwide
+                                reversal</span>
                             <span class="article-date">Apr 24, 2025</span>
-                        </div>
-                        <h3 class="article-title">12 UC Berkeley students' visas restored by ICE in nationwide reversal
-                        </h3>
-                    </a>
-                    <a href="https://www.dailycal.org/news/campus/international-students-fight-visa-terminations-allege-biometric-tracking/article_11e9b1ce-d815-46b0-92d1-da5f03b84fc6.html"
-                        target="_blank" rel="noopener" class="article-card">
-                        <div class="article-meta">
+                        </a>
+                        <a href="https://www.dailycal.org/news/campus/international-students-fight-visa-terminations-allege-biometric-tracking/article_11e9b1ce-d815-46b0-92d1-da5f03b84fc6.html"
+                            target="_blank" class="article-row">
                             <span class="article-category cat-immigrants">Immigrants</span>
+                            <span class="article-title">International students fight visa terminations, allege biometric
+                                tracking</span>
                             <span class="article-date">Apr 15, 2025</span>
-                        </div>
-                        <h3 class="article-title">International students fight visa terminations, allege biometric
-                            tracking</h3>
-                    </a>
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <!-- AsAm News -->
-            <div class="pub-group fade-in">
-                <div class="pub-group-header">
-                    <span class="pub-logo">AsAm News</span>
-                    <span class="pub-count">1 article</span>
-                </div>
-                <div class="articles-grid">
-                    <a href="https://voices.aaja.org/stories/seattle-2025/from-x-to-wechat-how-misinformation-spreads-across-social-media-and-into-chinese-language-spaces/"
-                        target="_blank" rel="noopener" class="article-card">
-                        <div class="article-meta">
+                <!-- AsAm News -->
+                <div class="pub-group">
+                    <div class="pub-group-header">
+                        <span class="pub-logo">AsAm News</span>
+                        <span class="pub-count">1</span>
+                    </div>
+                    <div class="articles-list">
+                        <a href="https://voices.aaja.org/stories/seattle-2025/from-x-to-wechat-how-misinformation-spreads-across-social-media-and-into-chinese-language-spaces/"
+                            target="_blank" class="article-row">
+                            <span class="article-title">How misinformation spreads across social media and into
+                                Chinese-language spaces</span>
                             <span class="article-date">Sep 12, 2025</span>
-                        </div>
-                        <h3 class="article-title">How misinformation spreads across social media and into
-                            Chinese-language spaces</h3>
-                    </a>
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Capital & Main -->
-            <div class="pub-group fade-in">
-                <div class="pub-group-header">
-                    <span class="pub-logo">Capital & Main</span>
-                    <span class="pub-count">1 article</span>
-                </div>
-                <div class="articles-grid">
-                    <a href="https://capitalandmain.com/assault-on-accessibility-initiatives-hits-early-career-scientists-hard"
-                        target="_blank" rel="noopener" class="article-card">
-                        <div class="article-meta">
+                <!-- Capital & Main -->
+                <div class="pub-group">
+                    <div class="pub-group-header">
+                        <span class="pub-logo">Capital & Main</span>
+                        <span class="pub-count">1</span>
+                    </div>
+                    <div class="articles-list">
+                        <a href="https://capitalandmain.com/assault-on-accessibility-initiatives-hits-early-career-scientists-hard"
+                            target="_blank" class="article-row">
+                            <span class="article-title">Assault on Accessibility Initiatives Hits Early Career
+                                Scientists Hard</span>
                             <span class="article-date">Sep 26, 2025</span>
-                        </div>
-                        <h3 class="article-title">Assault on Accessibility Initiatives Hits Early Career Scientists Hard
-                        </h3>
-                    </a>
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Richmond Confidential -->
-            <div class="pub-group fade-in">
-                <div class="pub-group-header">
-                    <span class="pub-logo">Richmond Confidential</span>
-                    <span class="pub-count">6 articles</span>
-                </div>
-                <div class="articles-grid">
-                    <a href="https://richmondconfidential.org/2025/04/21/richmond-lawsuit-swaps-jpmorgan-rcb-federal-court/"
-                        target="_blank" rel="noopener" class="article-card">
-                        <div class="article-meta">
+                <!-- Richmond Confidential -->
+                <div class="pub-group">
+                    <div class="pub-group-header">
+                        <span class="pub-logo">Richmond Confidential</span>
+                        <span class="pub-count">6</span>
+                    </div>
+                    <div class="articles-list">
+                        <a href="https://richmondconfidential.org/2025/04/21/richmond-lawsuit-swaps-jpmorgan-rcb-federal-court/"
+                            target="_blank" class="article-row">
                             <span class="article-category cat-law">Law</span>
+                            <span class="article-title">Richmond's lawsuit against banks over swaps could move to
+                                federal court</span>
                             <span class="article-date">Apr 21, 2025</span>
-                        </div>
-                        <h3 class="article-title">Richmond's lawsuit against banks over swaps could move to federal
-                            court</h3>
-                    </a>
-                    <a href="https://richmondconfidential.org/2025/03/21/richmond-hilltop-mall-hosts-pilot-for-futuristic-public-transport-system-glydways/"
-                        target="_blank" rel="noopener" class="article-card">
-                        <div class="article-meta">
+                        </a>
+                        <a href="https://richmondconfidential.org/2025/03/21/richmond-hilltop-mall-hosts-pilot-for-futuristic-public-transport-system-glydways/"
+                            target="_blank" class="article-row">
                             <span class="article-category cat-tech">Tech</span>
+                            <span class="article-title">Hilltop Mall hosts pilot for futuristic public shuttle
+                                system</span>
                             <span class="article-date">Mar 21, 2025</span>
-                        </div>
-                        <h3 class="article-title">Hilltop Mall hosts pilot for futuristic public shuttle system</h3>
-                    </a>
-                    <a href="https://richmondconfidential.org/2024/11/03/richmond-campaign-finance-data-see-how-much-each-richmond-city-council-candidate-raised/"
-                        target="_blank" rel="noopener" class="article-card">
-                        <div class="article-meta">
+                        </a>
+                        <a href="https://richmondconfidential.org/2024/11/03/richmond-campaign-finance-data-see-how-much-each-richmond-city-council-candidate-raised/"
+                            target="_blank" class="article-row">
                             <span class="article-category cat-data">Data</span>
+                            <span class="article-title">Campaign finance data: See how much each Richmond City Council
+                                candidate raised.</span>
                             <span class="article-date">Nov 3, 2024</span>
-                        </div>
-                        <h3 class="article-title">Campaign finance data: See how much each Richmond City Council
-                            candidate raised.</h3>
-                    </a>
-                    <a href="https://richmondconfidential.org/2024/10/31/richmond-city-council-candidate-aligns-with-your-views-interactive-game/"
-                        target="_blank" rel="noopener" class="article-card">
-                        <div class="article-meta">
+                        </a>
+                        <a href="https://richmondconfidential.org/2024/10/31/richmond-city-council-candidate-aligns-with-your-views-interactive-game/"
+                            target="_blank" class="article-row">
                             <span class="article-category cat-game">Game</span>
+                            <span class="article-title">Play to find out which Richmond City Council candidates align
+                                with your views</span>
                             <span class="article-date">Oct 31, 2024</span>
-                        </div>
-                        <h3 class="article-title">Play to find out which Richmond City Council candidates align with
-                            your views</h3>
-                    </a>
-                    <a href="https://richmondconfidential.org/2024/10/03/richmond-district-6-city-council-forum/"
-                        target="_blank" rel="noopener" class="article-card">
-                        <div class="article-meta">
+                        </a>
+                        <a href="https://richmondconfidential.org/2024/10/03/richmond-district-6-city-council-forum/"
+                            target="_blank" class="article-row">
                             <span class="article-category cat-election">Election</span>
+                            <span class="article-title">Residents ask District 6 City Council candidates what they will
+                                do about sideshows.</span>
                             <span class="article-date">Oct 3, 2024</span>
-                        </div>
-                        <h3 class="article-title">Residents ask District 6 City Council candidates what they will do
-                            about sideshows and smoke shops.</h3>
-                    </a>
-                    <a href="https://richmondconfidential.org/2024/11/05/richmond-city-council-races-election-day-results/"
-                        target="_blank" rel="noopener" class="article-card">
-                        <div class="article-meta">
+                        </a>
+                        <a href="https://richmondconfidential.org/2024/11/05/richmond-city-council-races-election-day-results/"
+                            target="_blank" class="article-row">
                             <span class="article-category cat-election">Election</span>
+                            <span class="article-title">Richmond City Council races: Two of three RPA candidates still
+                                lead</span>
                             <span class="article-date">Nov 5, 2024</span>
-                        </div>
-                        <h3 class="article-title">Richmond City Council races: Two of three RPA candidates still lead
-                        </h3>
-                    </a>
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Initium Media -->
-            <div class="pub-group fade-in">
-                <div class="pub-group-header">
-                    <span class="pub-logo">端傳媒 Initium Media</span>
-                    <span class="pub-count">1 article</span>
-                </div>
-                <div class="articles-grid">
-                    <a href="https://chinamediaproject.org/2024/11/05/harris-in-the-fissures-of-online-hate/"
-                        target="_blank" rel="noopener" class="article-card">
-                        <div class="article-meta">
+                <!-- Initium Media -->
+                <div class="pub-group">
+                    <div class="pub-group-header">
+                        <span class="pub-logo">端傳媒 Initium Media</span>
+                        <span class="pub-count">1</span>
+                    </div>
+                    <div class="articles-list">
+                        <a href="https://chinamediaproject.org/2024/11/05/harris-in-the-fissures-of-online-hate/"
+                            target="_blank" class="article-row">
                             <span class="article-category cat-china">China</span>
+                            <span class="article-title">Harris in the Fissures of Online Hate</span>
                             <span class="article-date">Nov 2024</span>
-                        </div>
-                        <h3 class="article-title">Harris in the Fissures of Online Hate</h3>
-                    </a>
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Syracuse News -->
-            <div class="pub-group fade-in">
-                <div class="pub-group-header">
-                    <span class="pub-logo">Syracuse News (Newhouse School)</span>
-                    <span class="pub-count">Audio</span>
-                </div>
-                <div class="articles-grid">
-                    <a href="https://nccnews.newhouse.syr.edu/author/ava-hu/" target="_blank" rel="noopener"
-                        class="article-card">
-                        <div class="article-meta">
+                <!-- Syracuse News -->
+                <div class="pub-group">
+                    <div class="pub-group-header">
+                        <span class="pub-logo">Syracuse News (Newhouse School)</span>
+                        <span class="pub-count">Audio</span>
+                    </div>
+                    <div class="articles-list">
+                        <a href="https://nccnews.newhouse.syr.edu/author/ava-hu/" target="_blank" class="article-row">
                             <span class="article-category cat-audio">Audio</span>
+                            <span class="article-title">Syracuse Communication School News Outlets</span>
                             <span class="article-date">2021 – 2023</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ===== DATA PROJECTS TAB ===== -->
+            <div class="tab-panel" id="tab-data">
+                <div class="project-grid">
+
+                    <!-- Richmond Quiz Game -->
+                    <a href="https://richmondconfidential.org/2024/10/31/richmond-city-council-candidate-aligns-with-your-views-interactive-game/"
+                        target="_blank" class="project-item">
+                        <div class="thumbnail-wrapper">
+                            <img src="images/richmond.png" alt="Richmond City Council Quiz Game">
                         </div>
-                        <h3 class="article-title">Syracuse Communication School News Outlets</h3>
+                        <div class="project-info">
+                            <h3 class="project-title">Richmond City Council Candidate Quiz</h3>
+                            <p class="project-desc">Interactive candidate matchmaker game for Richmond Confidential
+                                readers.</p>
+                            <div class="project-tools">
+                                <span class="tool-tag">JavaScript</span>
+                            </div>
+                        </div>
                     </a>
+
+                    <!-- Houston Wages -->
+                    <a href="https://djnf-data-2025.github.io/ava-hu/" target="_blank" class="project-item">
+                        <div class="thumbnail-wrapper">
+                            <img src="images/header_Wage and Employment Trends in Houston.png"
+                                alt="Wage Trends in Houston">
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Wage and Employment Trends in Houston</h3>
+                            <p class="project-desc">Data analysis and visualization of wages and employment using BLS
+                                OES Research Estimates.</p>
+                            <div class="project-tools">
+                                <span class="tool-tag">R</span>
+                                <span class="tool-tag">R Markdown</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- California Charter Schools (Flourish) -->
+                    <a href="https://avahuu.github.io/cal_school/" target="_blank" class="project-item">
+                        <div class="thumbnail-wrapper thumbnail-wrapper--iframe">
+                            <div class="flourish-embed flourish-chart" data-src="story/3343354">
+                                <script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img
+                                        src="https://public.flourish.studio/story/3343354/thumbnail" width="100%"
+                                        alt="CA Charter School visualization"></noscript>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">California Charter School Distribution</h3>
+                            <p class="project-desc">Mapping charter school demographics using U.S. Dept. of Education
+                                data.</p>
+                            <div class="project-tools">
+                                <span class="tool-tag">Python</span>
+                                <span class="tool-tag">Flourish</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- DC Bike Sharing -->
+                    <a href="https://github.com/avahuu/dc_bikesharing/blob/main/bikesharing.ipynb" target="_blank"
+                        class="project-item">
+                        <div class="thumbnail-wrapper">
+                            <img src="images/bike_sharing.png" alt="DC Bike Sharing Analysis">
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Bike Sharing System in DC</h3>
+                            <p class="project-desc">Distribution & KDE analysis comparing casual vs registered riders.
+                            </p>
+                            <div class="project-tools">
+                                <span class="tool-tag">Python</span>
+                                <span class="tool-tag">Matplotlib</span>
+                                <span class="tool-tag">seaborn</span>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- ===== VISUALIZATIONS TAB ===== -->
+            <div class="tab-panel" id="tab-viz">
+                <div class="project-grid">
+
+                    <a href="https://aapidata.com/blog/policy-whiplash-high-skilled-immigrants-and-international-students-in-the-second-trump-administration"
+                        target="_blank" class="project-item">
+                        <div class="thumbnail-wrapper thumbnail-wrapper--iframe">
+                            <div class="flourish-embed flourish-chart" data-src="story/3343354">
+                                <script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img
+                                        src="https://public.flourish.studio/story/3343354/thumbnail" width="100%"
+                                        alt="Policy Whiplash visualization"></noscript>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Policy Whiplash — Immigration Data Visualizations</h3>
+                            <p class="project-desc">AAPI Data analysis of immigration policy impacts.</p>
+                            <div class="project-tools">
+                                <span class="tool-tag">Flourish</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://djnf-data-2025.github.io/ava-hu/" target="_blank" class="project-item">
+                        <div class="thumbnail-wrapper">
+                            <img src="images/header_Wage and Employment Trends in Houston.png"
+                                alt="Houston wage visualization">
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Wage and Employment Trends in Houston</h3>
+                            <p class="project-desc">Interactive charts exploring wage patterns in the Houston metro
+                                area.</p>
+                            <div class="project-tools">
+                                <span class="tool-tag">R</span>
+                                <span class="tool-tag">Datawrapper</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://avahuu.github.io/cal_school/" target="_blank" class="project-item">
+                        <div class="thumbnail-wrapper thumbnail-wrapper--iframe">
+                            <div class="flourish-embed flourish-chart" data-src="story/3343354">
+                                <script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img
+                                        src="https://public.flourish.studio/story/3343354/thumbnail" width="100%"
+                                        alt="CA Charter Schools"></noscript>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">California Charter School Distribution</h3>
+                            <p class="project-desc">Interactive maps of charter school demographics across California.
+                            </p>
+                            <div class="project-tools">
+                                <span class="tool-tag">Python</span>
+                                <span class="tool-tag">Flourish</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://readymag.website/u1929452997/5452467/" target="_blank" class="project-item">
+                        <div class="thumbnail-wrapper">
+                            <img src="images/header_Wage and Employment Trends in Houston.png"
+                                alt="Fulbright visualization">
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Fulbright Scholars Impacted by Funding Cuts</h3>
+                            <p class="project-desc">Data-driven design piece on the impact of higher education funding
+                                cuts.</p>
+                            <div class="project-tools">
+                                <span class="tool-tag">Readymag</span>
+                                <span class="tool-tag">Datawrapper</span>
+                            </div>
+                        </div>
+                    </a>
+
                 </div>
             </div>
 
         </div>
-    </section>
+    </main>
 
-    <!-- ========== Data Projects ========== -->
-    <section class="section section--alt" id="projects">
-        <div class="container">
-            <div class="section-header fade-in">
-                <h2 class="section-title">Data Projects</h2>
-            </div>
-            <div class="projects-list">
+    <footer class="footer">© 2025 Ava Hu</footer>
 
-                <!-- 1. Richmond Quiz Game (screenshot) -->
-                <a href="https://richmondconfidential.org/2024/10/31/richmond-city-council-candidate-aligns-with-your-views-interactive-game/"
-                    target="_blank" rel="noopener" class="project-card fade-in">
-                    <div class="project-visual">
-                        <img src="images/richmond.png" alt="Richmond City Council Quiz Game screenshot">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-tools">
-                            <span class="tool-tag">JavaScript</span>
-                        </div>
-                        <h3 class="project-title">Richmond City Council Candidate Quiz Game</h3>
-                        <p class="project-source">Interactive game for Richmond Confidential</p>
-                        <span class="project-link">View Project</span>
-                    </div>
-                </a>
-
-                <!-- 2. Houston Wages (screenshot) -->
-                <a href="https://djnf-data-2025.github.io/ava-hu/" target="_blank" rel="noopener"
-                    class="project-card fade-in">
-                    <div class="project-visual">
-                        <img src="images/header_Wage and Employment Trends in Houston.png"
-                            alt="Wage and Employment Trends in Houston">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-tools">
-                            <span class="tool-tag">R</span>
-                            <span class="tool-tag">R Markdown</span>
-                        </div>
-                        <h3 class="project-title">Wage and Employment Trends in Houston</h3>
-                        <p class="project-source">Source: BLS OES Research Estimates</p>
-                        <span class="project-link">View Project</span>
-                    </div>
-                </a>
-
-                <!-- 3. California Charter Schools (Flourish iframe) -->
-                <div class="project-card fade-in">
-                    <div class="project-visual project-visual--iframe">
-                        <div class="flourish-embed flourish-chart" data-src="story/3343354">
-                            <script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img
-                                    src="https://public.flourish.studio/story/3343354/thumbnail" width="100%"
-                                    alt="California Charter School visualization"></noscript>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-tools">
-                            <span class="tool-tag">Python</span>
-                            <span class="tool-tag">Flourish</span>
-                        </div>
-                        <h3 class="project-title">California Charter School Distribution</h3>
-                        <p class="project-source">Source: U.S. Department of Education's Office for Civil Rights</p>
-                        <a href="https://avahuu.github.io/cal_school/" target="_blank" rel="noopener"
-                            class="project-link">View Project</a>
-                    </div>
-                </div>
-
-                <!-- 4. DC Bike Sharing — merged (screenshot) -->
-                <a href="https://github.com/avahuu/dc_bikesharing/blob/main/bikesharing.ipynb" target="_blank"
-                    rel="noopener" class="project-card fade-in">
-                    <div class="project-visual">
-                        <img src="images/bike_sharing.png" alt="DC Bike Sharing analysis">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-tools">
-                            <span class="tool-tag">Python</span>
-                            <span class="tool-tag">Matplotlib</span>
-                            <span class="tool-tag">seaborn</span>
-                        </div>
-                        <h3 class="project-title">Bike Sharing System in DC</h3>
-                        <p class="project-source">Distribution & KDE Analysis: Casual vs Registered Riders</p>
-                        <span class="project-link">View Project</span>
-                    </div>
-                </a>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== Visualization Highlights ========== -->
-    <section class="section" id="visualizations">
-        <div class="container">
-            <div class="section-header fade-in">
-                <h2 class="section-title">Visualization Highlights</h2>
-            </div>
-            <div class="viz-grid">
-
-                <a href="https://aapidata.com/blog/policy-whiplash-high-skilled-immigrants-and-international-students-in-the-second-trump-administration"
-                    target="_blank" rel="noopener" class="viz-card fade-in">
-                    <div class="viz-preview viz-bg-1">📉</div>
-                    <div class="viz-info">
-                        <span class="viz-label">AAPI Data</span>
-                        <h3 class="viz-title">Policy Whiplash — Immigration Data Visualizations</h3>
-                        <span class="viz-link">View →</span>
-                    </div>
-                </a>
-
-                <a href="https://djnf-data-2025.github.io/ava-hu/" target="_blank" rel="noopener"
-                    class="viz-card fade-in">
-                    <div class="viz-preview viz-bg-2">💰</div>
-                    <div class="viz-info">
-                        <span class="viz-label">Data Reporting</span>
-                        <h3 class="viz-title">Wage and Employment Trends in Houston</h3>
-                        <span class="viz-link">View →</span>
-                    </div>
-                </a>
-
-                <a href="https://avahuu.github.io/cal_school/" target="_blank" rel="noopener" class="viz-card fade-in">
-                    <div class="viz-preview viz-bg-3">🏫</div>
-                    <div class="viz-info">
-                        <span class="viz-label">Education</span>
-                        <h3 class="viz-title">California Charter School Distribution</h3>
-                        <span class="viz-link">View →</span>
-                    </div>
-                </a>
-
-                <a href="https://djnf-data-2025.github.io/ava-hu/" target="_blank" rel="noopener"
-                    class="viz-card fade-in">
-                    <div class="viz-preview viz-bg-4">🎨</div>
-                    <div class="viz-info">
-                        <span class="viz-label">Design</span>
-                        <h3 class="viz-title">Wage and Employment — Design Version</h3>
-                        <span class="viz-link">View →</span>
-                    </div>
-                </a>
-
-                <a href="https://readymag.website/u1929452997/5452467/" target="_blank" rel="noopener"
-                    class="viz-card fade-in">
-                    <div class="viz-preview viz-bg-5">🎓</div>
-                    <div class="viz-info">
-                        <span class="viz-label">Data</span>
-                        <h3 class="viz-title">Fulbright Scholars Impacted by Funding Cuts</h3>
-                        <span class="viz-link">View →</span>
-                    </div>
-                </a>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== Footer ========== -->
-    <footer class="footer">
-        <div class="container">
-            <p class="footer-name">Ava Hu</p>
-            <p class="footer-tagline">Data Reporting · Design · Multimedia</p>
-            <div class="footer-links">
-                <a href="https://github.com/avahuu" target="_blank" rel="noopener">GitHub</a>
-                <a href="https://www.linkedin.com/in/avahu/" target="_blank" rel="noopener">LinkedIn</a>
-                <a href="mailto:ava_hu@berkeley.edu">Email</a>
-            </div>
-            <p class="footer-copy">© 2025 Ava Hu. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- ========== Scroll Animation Script ========== -->
+    <!-- ========== Tab Switch Script ========== -->
     <script>
-        // Intersection Observer for fade-in animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update buttons
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                // Update panels
+                document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+                document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
             });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -40px 0px'
         });
-
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     </script>
 
 </body>
