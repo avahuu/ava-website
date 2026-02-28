@@ -155,8 +155,10 @@ ul { list-style: none; }
 
 /* ---------- Tab Navigation ---------- */
 .tab-nav {
-  background: var(--color-surface);
-  border-bottom: 1px solid var(--color-divider);
+  background: rgba(249, 248, 246, 0.72);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  backdrop-filter: blur(16px) saturate(180%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -164,19 +166,20 @@ ul { list-style: none; }
 
 .tab-nav .container {
   display: flex;
-  gap: 0;
+  justify-content: center;
+  gap: 4px;
 }
 
 .tab-btn {
   font-family: var(--font-body);
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--color-text-muted);
   background: none;
   border: none;
-  padding: 14px 20px;
+  padding: 18px 24px;
   cursor: pointer;
   position: relative;
   transition: color var(--transition);
@@ -186,10 +189,11 @@ ul { list-style: none; }
   content: '';
   position: absolute;
   bottom: 0;
-  left: 20px;
-  right: 20px;
-  height: 2px;
+  left: 24px;
+  right: 24px;
+  height: 2.5px;
   background: var(--color-accent);
+  border-radius: 2px 2px 0 0;
   transform: scaleX(0);
   transition: transform var(--transition);
 }
@@ -200,6 +204,7 @@ ul { list-style: none; }
 
 .tab-btn.active {
   color: var(--color-text);
+  font-weight: 600;
 }
 
 .tab-btn.active::after {
@@ -309,8 +314,8 @@ ul { list-style: none; }
 }
 
 .award-detail h3 {
-  font-family: var(--font-heading);
-  font-size: 0.95rem;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
   font-weight: 600;
   line-height: 1.35;
   margin-bottom: 4px;
@@ -500,8 +505,8 @@ ul { list-style: none; }
 }
 
 .project-title {
-  font-family: var(--font-heading);
-  font-size: 0.95rem;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
   font-weight: 600;
   line-height: 1.35;
   margin-bottom: 4px;
