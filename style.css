@@ -437,6 +437,19 @@ ul { list-style: none; }
   pointer-events: auto;
 }
 
+/* Emoji placeholder thumbnail (for awards without photos) */
+.thumbnail-wrapper--accent {
+  background: linear-gradient(135deg, var(--color-hero-bg) 0%, var(--color-hero-bg-2) 50%, #0f3460 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumbnail-emoji {
+  font-size: 2.8rem;
+  line-height: 1;
+}
+
 .project-info {
   padding: 14px 16px 16px;
 }
