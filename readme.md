@@ -1,3 +1,6 @@
-## My first website
+# Ava Hu — Portfolio
 
-I built this for J220 coding class lessions but I might actually use it. 
+🌐 **Live site:** [https://avahuu.github.io/ava-website/](https://avahuu.github.io/ava-website/)
+
+Data Reporter & Multimedia Journalist based in the Bay Area.  
+Published by The Guardian, Houston Chronicle, and more.
