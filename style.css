@@ -234,52 +234,97 @@ ul { list-style: none; }
   margin-bottom: 20px;
 }
 
-/* ---------- Awards ---------- */
-.awards-list {
+/* ---------- Awards — Horizontal Rows ---------- */
+.awards-rows {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-bottom: 32px;
+  gap: 0;
 }
 
-.award-item {
+.award-row {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  padding: 14px 18px;
-  background: var(--color-surface);
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--color-divider);
+  transition: background var(--transition);
+  text-decoration: none;
+  color: inherit;
+}
+
+.award-row:first-child {
+  padding-top: 0;
+}
+
+.award-row:last-child {
+  border-bottom: none;
+}
+
+.award-row:hover {
+  background: var(--color-accent-light);
+  margin: 0 -12px;
+  padding-left: 12px;
+  padding-right: 12px;
   border-radius: var(--radius-md);
-  border: 1px solid var(--color-border);
-  transition: box-shadow var(--transition);
 }
 
-.award-item:hover {
-  box-shadow: var(--shadow-md);
-}
-
-.award-emoji {
-  font-size: 1.4rem;
+.award-thumb {
+  width: 120px;
+  height: 80px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
   flex-shrink: 0;
-  line-height: 1.4;
+  background: var(--color-bg);
 }
 
-.award-info h3 {
+.award-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.award-thumb--icon {
+  background: linear-gradient(135deg, var(--color-hero-bg) 0%, var(--color-hero-bg-2) 50%, #0f3460 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.award-detail {
+  flex: 1;
+  min-width: 0;
+}
+
+.award-year {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--color-accent);
+  background: var(--color-accent-light);
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+.award-detail h3 {
   font-family: var(--font-heading);
   font-size: 0.95rem;
   font-weight: 600;
   line-height: 1.35;
   margin-bottom: 4px;
+  transition: color var(--transition);
 }
 
-.award-info a {
-  font-size: 0.78rem;
-  font-weight: 600;
+.award-row:hover .award-detail h3 {
   color: var(--color-accent);
-  letter-spacing: 0.04em;
 }
 
-.award-info a:hover {
-  color: var(--color-accent-hover);
+.award-detail p {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  line-height: 1.5;
 }
 
 /* ---------- Writing — Publication Groups ---------- */
