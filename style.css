@@ -424,6 +424,35 @@ ul { list-style: none; }
   white-space: nowrap;
 }
 
+/* ---------- Writing Cards — Publication Badge ---------- */
+.pub-badge {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #fff;
+  background: rgba(26, 26, 46, 0.7);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  padding: 4px 10px;
+  border-radius: 12px;
+  z-index: 2;
+  white-space: nowrap;
+}
+
+.writing-card .project-info {
+  padding: 12px 16px 14px;
+}
+
+.writing-card .article-date {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+}
+
 /* ---------- Project Grid (Data Projects / Viz) ---------- */
 .project-grid {
   display: grid;
